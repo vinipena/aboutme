@@ -1,0 +1,30 @@
+body{
+    background-image: url(gradient_CSS.jpg);
+    background-size: 100vw 100vh;
+}
+
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.menu li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: teal;
+}
+
+.site-title,
+.site-subtitle{
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-subtitle{
+    font-style: italic;
+}
