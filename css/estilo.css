@@ -1,30 +1,75 @@
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-image: url("../images/gradient_CSS.jpg");
     background-size: 100vw 100vh;
 }
 
+@media (min-width: 400px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 22px;
+    }
+  }
 
+header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
 .menu ul{
     display: flex;
     justify-content: space-around;
-    background-color: white;
+    
 }
 
 .menu li{
     list-style: none;
 }
 
+.menu a {
+    color: teal;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+
 a{
     text-decoration: none;
     color: teal;
 }
 
-.site-title,
-.site-subtitle{
+.site-title {
     color: whitesmoke;
     text-align: center;
-}
+  }
 
-.site-subtitle{
+.site-subtitle {
+    color: silver;
     font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2em;
+  }
+
+.img-portfolio{
+    width: 180px;
+    height: 180px;
 }
