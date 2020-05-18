@@ -7,6 +7,7 @@
 body{
     background-image: url("../images/gradient_CSS.jpg");
     background-size: 100vw 100vh;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 @media (min-width: 400px) {
@@ -56,9 +57,15 @@ a{
     color: teal;
 }
 
+.menu a:hover{
+  font-size: 0.9em
+}
+
 .site-title {
     color: whitesmoke;
     text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2.5em;
   }
 
 .site-subtitle {
@@ -66,10 +73,30 @@ a{
     font-style: italic;
     font-weight: lighter;
     text-align: center;
-    font-size: 2em;
+    font-size: 0.7em;
+    font-family: 'Shadows Into Light Two', cursive;
   }
 
+  .projetos{
+    padding: 2em;
+  
+  }
+
+.projetos h2{
+  font-family: 'Shadows Into Light Two', cursive;
+  margin-bottom: 2em;
+  color: silver;
+}
+.projetos .grid{
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 240px;
+}
+
+.projetos figure{
+  text-align: center;
+}
 .img-portfolio{
-    width: 180px;
+    width: 240px;
     height: 180px;
 }
