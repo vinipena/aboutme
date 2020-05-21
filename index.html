@@ -5,16 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Pena - Front-end Developer</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Shadows+Into+Light+Two&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet"></head>
+    <script src="https://kit.fontawesome.com/123d96df60.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Shadows+Into+Light+Two&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
         <nav class="menu">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Estudos</a></li>
-            <li><a href="#">Projeto</a></li>
-            <li><a href="#">Hobbies</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-me">Sobre</a></li>
+            
+            <li><a href="#projects">Projeto</a></li>
+            
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </nav>
         <div>
@@ -24,11 +27,11 @@
      
     </header>
 
-    <section class="sobre-mim">
+    <section id="about-me" class="sobre-mim">
         <h2>Sobre Mim</h2>
     </section>
 
-      <section class="projetos">
+      <section id="projects" class="projetos">
 
         <h2>Projetos</h2>
        
@@ -55,14 +58,23 @@
        </div>
       </section>
       
-      <section class="hobbies">
-
+      <section id="contact" class="contato">
+        <h2>Contato</h2>
+          <div class="grid icons">
+          <a target="_blank" href="https://github.com/vinipena">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/Qpenavini">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/viniciuspena/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:vacpena@gmail.com">
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </div>
       </section>
-     
-      <section class="contato">
-
-      </section>
-
       <footer>
 
       </footer>

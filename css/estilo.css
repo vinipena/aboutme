@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("../images/gradient_CSS.jpg");
+    background-image: url("../images/background-azul.gif");
     background-size: auto 100vh;
     font-family: 'Ubuntu Mono', monospace;
 }
@@ -23,7 +23,7 @@ body{
   }
 
 header {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ header {
     width: 100vw;
     position: fixed;
     top: 0;
-    background-color: white;
+    background-color: teal;
 }
 .menu ul{
     display: flex;
@@ -46,9 +46,10 @@ header {
 }
 
 .menu a {
-    color: teal;
+    color: whitesmoke;
     display: block;
     padding: 10px;
+    margin: 5px;
     text-decoration: none;
   }
 
@@ -58,13 +59,14 @@ a{
 }
 
 .menu a:hover{
-  font-size: 0.9em
+background-color: darkslategray;
+
 }
 
 .site-title {
     color: whitesmoke;
     text-align: center;
-    font-family: 'Gochi Hand', cursive;
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 2.5em;
   }
 
@@ -72,27 +74,28 @@ a{
     color: silver;
     font-style: italic;
     font-weight: lighter;
-    text-align: center;
+    text-align: right;
     font-size: 0.7em;
     font-family: 'Shadows Into Light Two', cursive;
+    
   }
 
-  .sobre-mim h2{
-    font-family: 'Shadows Into Light Two', cursive;
-    margin-bottom: 2em;
-    color: silver;
-  }
+  .sobre-mim,
+  .contato,
   .projetos{
+  
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
   }
-
+.sobre-mim h2,
+.contato h2,
 .projetos h2{
   color: silver;
   font-family: 'Shadows Into Light Two', cursive;
   margin-bottom: 2em;
   
 }
+
 .projetos .grid{
   display: grid;
   gap: 2em;
@@ -100,7 +103,7 @@ a{
 }
 
 @media (min-width: 560px){
-
+ 
   .projetos .grid{
   grid-template-columns: 240px 240px ;
   align-items: center;
@@ -110,16 +113,26 @@ a{
 
 
 @media (min-width: 880px){
-
+  
   .projetos .grid{
   grid-template-columns: repeat(3, 240px) ;
   align-items: center;
   justify-content: center;
   }
+ 
 }
 
 .projetos figure{
   text-align: center;
+}
+
+.icons{
+  text-align: center;
+}
+.contato a{
+  color: whitesmoke;
+  font-size: 5em;
+ 
 }
 
 .img-portfolio{
