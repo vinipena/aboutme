@@ -6,7 +6,7 @@
 }
 body{
     background-image: url("../images/gradient_CSS.jpg");
-    background-size: 100vw 100vh;
+    background-size: auto 100vh;
     font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -77,26 +77,55 @@ a{
     font-family: 'Shadows Into Light Two', cursive;
   }
 
+  .sobre-mim h2{
+    font-family: 'Shadows Into Light Two', cursive;
+    margin-bottom: 2em;
+    color: silver;
+  }
   .projetos{
     padding: 2em;
-  
+    height: 100vh;
   }
 
 .projetos h2{
+  color: silver;
   font-family: 'Shadows Into Light Two', cursive;
   margin-bottom: 2em;
-  color: silver;
+  
 }
 .projetos .grid{
   display: grid;
-  gap: 1em;
-  grid-template-columns: 240px;
+  gap: 2em;
+  
+}
+
+@media (min-width: 560px){
+
+  .projetos .grid{
+  grid-template-columns: 240px 240px ;
+  align-items: center;
+  justify-content: center;
+  }
+}
+
+
+@media (min-width: 880px){
+
+  .projetos .grid{
+  grid-template-columns: repeat(3, 240px) ;
+  align-items: center;
+  justify-content: center;
+  }
 }
 
 .projetos figure{
   text-align: center;
 }
+
 .img-portfolio{
     width: 240px;
     height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 25%;
 }
