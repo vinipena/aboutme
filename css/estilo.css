@@ -13,9 +13,8 @@ body{
 @media (min-width: 400px) {
     body {
       font-size: 18px;
-    }
   }
-  
+}
   @media (min-width: 600px) {
     body {
       font-size: 22px;
@@ -33,7 +32,8 @@ header {
     width: 100vw;
     position: fixed;
     top: 0;
-    background-color: teal;
+    background-color:whitesmoke;
+    z-index: 1;
 }
 .menu ul{
     display: flex;
@@ -46,11 +46,12 @@ header {
 }
 
 .menu a {
-    color: whitesmoke;
+    color: dodgerblue;
     display: block;
     padding: 10px;
     margin: 5px;
     text-decoration: none;
+    transition: text-shadow 1s;
   }
 
 a{
@@ -58,8 +59,9 @@ a{
     color: teal;
 }
 
+.menu a:active,
 .menu a:hover{
-background-color: darkslategray;
+text-shadow: 0 0 2px teal;
 
 }
 
@@ -67,7 +69,7 @@ background-color: darkslategray;
     color: whitesmoke;
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 2.5em;
+    font-size: 3em;
   }
 
 .site-subtitle {
@@ -75,28 +77,104 @@ background-color: darkslategray;
     font-style: italic;
     font-weight: lighter;
     text-align: right;
-    font-size: 0.7em;
+    font-size: 1.2em;
     font-family: 'Shadows Into Light Two', cursive;
     
   }
+.site-title,
+.site-subtitle{
+  animation: linear 3s apareceTitulo forwards;
+  }
 
+  @keyframes apareceTitulo{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  .ponto-um{
+    opacity: 0;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+  }
+  .ponto-dois{
+    opacity: 0;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+  }
+  .ponto-tres {
+    opacity: 0;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+}
+@keyframes dot {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
   .sobre-mim,
   .contato,
-  .projetos{
+  .conhecimentos{
   
     padding: 2em;
     min-height: 100vh;
   }
 .sobre-mim h2,
 .contato h2,
-.projetos h2{
-  color: silver;
-  font-family: 'Shadows Into Light Two', cursive;
-  margin-bottom: 2em;
+.conhecimentos h2{
   
+  color: whitesmoke;
+  margin-bottom: 2em;
+  padding-top: 10px;
 }
 
-.projetos .grid{
+.sobre-mim p {
+  color: white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre-mim a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre-mim a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: magenta;
+}
+
+.sobre-mim img{
+  height: 50vh;
+  width: auto;
+}
+.sobre-mim .avatar {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+ 
+}
+
+@media (min-width: 600px) {
+  .sobre-mim .avatar {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
+}
+
+.conhecimentos .grid{
   display: grid;
   gap: 2em;
   
@@ -104,7 +182,7 @@ background-color: darkslategray;
 
 @media (min-width: 560px){
  
-  .projetos .grid{
+  .conhecimentos .grid{
   grid-template-columns: 240px 240px ;
   align-items: center;
   justify-content: center;
@@ -114,7 +192,7 @@ background-color: darkslategray;
 
 @media (min-width: 880px){
   
-  .projetos .grid{
+  .conhecimentos .grid{
   grid-template-columns: repeat(3, 240px) ;
   align-items: center;
   justify-content: center;
@@ -122,7 +200,7 @@ background-color: darkslategray;
  
 }
 
-.projetos figure{
+.conhecimentos{
   text-align: center;
 }
 
@@ -132,13 +210,35 @@ background-color: darkslategray;
 .contato a{
   color: whitesmoke;
   font-size: 5em;
- 
+  transition: text-shadow 1s;
+}
+.img-conhecimentos:hover,
+.img-conhecimentos:active,
+.contato a:active,
+.contato a:hover{
+  text-shadow: 0 0 5px ;
 }
 
-.img-portfolio{
-    width: 240px;
-    height: 180px;
-    object-fit: cover;
-    object-position: left bottom;
-    border-radius: 25%;
+@media (min-width: 300px){
+ 
+  .contato .grid{
+  display: grid;
+  grid-template-columns:  150px ;
+  align-items: center;
+  justify-content: center;
+  }
+}
+@media (min-width: 700px){
+ 
+  .contato .grid{
+  display: grid;
+  grid-template-columns: repeat(4 , 150px );
+  align-items: center;
+  justify-content: center;
+  }
+}
+
+.conhecimentos i {
+  font-size: 200px;
+  color: whitesmoke;
 }
